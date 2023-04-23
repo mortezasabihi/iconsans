@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
+    "@commitlint/config-lerna-scopes": "^17.4.2",
+    "husky": "^8.0.3",
+    "lerna": "^6.6.1",
+    "typescript": "^5.0.4"
+  }
+}
