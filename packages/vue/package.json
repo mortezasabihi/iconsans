@@ -1,0 +1,48 @@
+{
+  "name": "@iconsans/vue",
+  "version": "0.0.0",
+  "description": "+320 Free Icons for your next project",
+  "keywords": [],
+  "author": {
+    "name": "Morteza Sabihi",
+    "email": "morteza.sabihi@gmail.com",
+    "url": "https://mortezasabihi.com"
+  },
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "directories": {
+    "componentns": "componentns"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortezasabihi/iconsans.git"
+  },
+  "scripts": {
+    "preconvert": "rimraf components",
+    "convert": "yarn preconvert && node ./vue-converter.cjs",
+    "prebuild": "rimraf dist && rimraf types",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly",
+    "build": "yarn prebuild && rollup -c --bundleConfigAsCjs && yarn build:types && rimraf dist/esm/types && rimraf dist/cjs/types && mv types dist/esm && cp -R dist/esm/types dist/cjs"
+  },
+  "bugs": {
+    "url": "https://github.com/mortezasabihi/iconsans/issues"
+  },
+  "homepage": "https://github.com/mortezasabihi/iconsans#readme",
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.47",
+    "rollup-plugin-vue": "^6.0.0",
+    "vue-tsc": "^1.4.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.47"
+  }
+}
