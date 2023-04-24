@@ -20,6 +20,7 @@
     "xmldom": "^0.6.0"
   },
   "scripts": {
-    "prepublish": "lerna version --no-private --conventional-commits --no-commit-hooks"
+    "prepublish": "lerna version --no-private --conventional-commits --no-commit-hooks",
+    "publish": "lerna publish from-git --verify-access"
   }
 }
