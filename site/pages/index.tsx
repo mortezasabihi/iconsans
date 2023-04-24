@@ -1,7 +1,11 @@
-import { Typography } from "@mui/material";
+import { Header } from "@/components";
 
 function Index() {
-  return <Typography>Home</Typography>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default Index;
