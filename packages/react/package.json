@@ -1,0 +1,48 @@
+{
+  "name": "@iconsans/react",
+  "version": "0.0.0",
+  "description": "+320 Free Icons for your next project",
+  "keywords": [],
+  "author": {
+    "name": "Morteza Sabihi",
+    "email": "morteza.sabihi@gmail.com",
+    "url": "https://mortezasabihi.com"
+  },
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "directories": {
+    "componentns": "componentns"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortezasabihi/iconsans.git"
+  },
+  "scripts": {
+    "preconvert": "rimraf components && mkdir components",
+    "convert": "npx @svgr/cli --typescript --replace-attr-values '#00153F=currentColor' --filename-case 'kebab' --no-dimensions --ref --out-dir ./components --ignore-existing -- ../../icons",
+    "prebuild": "rimraf dist",
+    "build": "yarn prebuild && rollup -c --bundleConfigAsCjs"
+  },
+  "bugs": {
+    "url": "https://github.com/mortezasabihi/iconsans/issues"
+  },
+  "homepage": "https://github.com/mortezasabihi/iconsans#readme",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@svgr/cli": "^7.0.0",
+    "@types/react": "^18.0.38",
+    "rollup-plugin-dts": "^5.3.0"
+  }
+}
