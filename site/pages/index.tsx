@@ -1,4 +1,4 @@
-import { Header, IconsList } from "@/components";
+import { Header, Hero, IconsList } from "@/components";
 import { Container } from "@mui/material";
 import type { GetStaticProps } from "next";
 
@@ -14,7 +14,9 @@ export default function Index({ data }: Props) {
     <>
       <Header />
 
-      <Container component="main" sx={{ mt: 8 }}>
+      <Hero />
+
+      <Container component="main" sx={{ mt: 4 }}>
         <IconsList icons={data} />
       </Container>
     </>
