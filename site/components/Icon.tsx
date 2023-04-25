@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import { blue } from "@mui/material/colors";
+import { useSnackbar } from "notistack";
 
 interface Props {
   name: string;
@@ -7,30 +8,43 @@ interface Props {
 }
 
 const Icon: React.FC<Props> = ({ name, svg }) => {
+  const { enqueueSnackbar } = useSnackbar();
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(name);
+
+    enqueueSnackbar(`${name} copied`, {
+      variant: "success",
+    });
+  };
+
   return (
-    <Card
-      variant="outlined"
-      sx={{
-        cursor: "pointer",
-        ":hover": {
-          bgcolor: blue[400],
-        },
-      }}
-    >
-      <CardContent
+    <>
+      <Card
+        variant="outlined"
         sx={{
-          pb: "16px!important",
+          cursor: "pointer",
+          ":hover": {
+            bgcolor: blue[400],
+          },
         }}
+        onClick={handleCopy}
       >
-        <Box
-          sx={{ display: "flex", justifyContent: "center", mb: 4 }}
-          dangerouslySetInnerHTML={{ __html: svg }}
-        />
-        <Typography variant="body2" align="center">
-          {name}
-        </Typography>
-      </CardContent>
-    </Card>
+        <CardContent
+          sx={{
+            pb: "16px!important",
+          }}
+        >
+          <Box
+            sx={{ display: "flex", justifyContent: "center", mb: 4 }}
+            dangerouslySetInnerHTML={{ __html: svg }}
+          />
+          <Typography variant="body2" align="center">
+            {name}
+          </Typography>
+        </CardContent>
+      </Card>
+    </>
   );
 };
 
