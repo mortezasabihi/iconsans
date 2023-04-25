@@ -25,7 +25,7 @@ export default function Index({ data }: Props) {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/icons");
+    const response = await fetch(`${process.env.API_URL}/icons`);
     const data = await response.json();
     return {
       props: {

@@ -2,3 +2,4 @@ node_modules/
 dist
 *-debug.log
 .next
+.env
