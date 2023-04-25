@@ -1,0 +1,31 @@
+{
+  "name": "site",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortezasabihi/iconsans.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"next dev\" \"ts-node --esm ./scripts/generate-data.ts\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.1",
+    "highlight.js": "^11.7.0",
+    "next": "^13.3.1",
+    "notistack": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.38",
+    "concurrently": "^8.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
