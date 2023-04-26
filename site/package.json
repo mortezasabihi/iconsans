@@ -10,6 +10,7 @@
     "dev": "concurrently \"next dev\" \"ts-node --esm ./scripts/generate-data.ts\"",
     "build": "next build",
     "start": "next start",
+    "serve": "serve dist",
     "lint": "next lint"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@types/react": "^18.0.38",
     "concurrently": "^8.0.1",
+    "serve": "^14.2.0",
     "ts-node": "^10.9.1"
   }
 }
