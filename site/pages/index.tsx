@@ -1,12 +1,15 @@
 import { Header, Hero, IconsList } from "@/components";
 import { Container } from "@mui/material";
 import type { GetStaticProps } from "next";
+import iconsList from "public/icons.json";
+
+type Data = {
+  name: string;
+  svg: string;
+}[];
 
 interface Props {
-  data: {
-    name: string;
-    svg: string;
-  }[];
+  data: Data;
 }
 
 export default function Index({ data }: Props) {
@@ -23,16 +26,18 @@ export default function Index({ data }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  try {
-    const response = await fetch(`${process.env.API_URL}/icons`);
-    const data = await response.json();
-    return {
-      props: {
-        data,
-      },
-    };
-  } catch (error) {
-    return { props: { data: [] } };
-  }
+export const getStaticProps: GetStaticProps = () => {
+  let data: Data = iconsList;
+  data = data.map((item) => ({
+    ...item,
+    name: item.name.charAt(0).toUpperCase() + item.name.slice(1),
+    svg: item.svg
+      .replace(`width=\"24\"`, `width=\"50\"`)
+      .replace(`height=\"24\"`, `height=\"50\"`),
+  }));
+  return {
+    props: {
+      data: data,
+    },
+  };
 };
