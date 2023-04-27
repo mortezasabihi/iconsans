@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: Yarn Bootstrap
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v4
         with:
           cmd: bootstrap
 
