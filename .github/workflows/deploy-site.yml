@@ -30,8 +30,8 @@ jobs:
 
       - name: Build Site
         run: |
-          touch site/dist/.nojekyll
           npx lerna run build --scope=site
+          touch site/dist/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
