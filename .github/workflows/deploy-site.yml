@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - "site/**"
+      - "site"
 
 permissions:
   contents: write
