@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: Install Dependecies
-        run: npx lerna bootstrap --ignore-prepublish
+        run: npx lerna bootstrap --ignore-scripts=true --npm-client=npm
 
       - name: Build Site
         run: npx lerna run build --scope=site
