@@ -30,7 +30,7 @@ jobs:
 
       - name: Build Site
         run: |
-          npx lerna run build --scope=site
+          NODE_ENV=production npx lerna run build --scope=site
           touch site/dist/.nojekyll
 
       - name: Deploy
