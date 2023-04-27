@@ -1,9 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 
-function kebabToCamelCase(str: string) {
-    return str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase()).replaceAll('-', '');
+function kebabToPascal(kebabCase: string): string {
+    const words = kebabCase.split('-');
+    const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const pascalCase = capitalizedWords.join('');
+    return pascalCase.replaceAll(' ', '');
 }
+
 
 (async () => {
     try {
@@ -14,9 +18,10 @@ function kebabToCamelCase(str: string) {
             .filter((file) => file.endsWith('.svg'))
             .map((file) => {
                 const fileName = file.replace('.svg', '');
-                const camelCaseName = kebabToCamelCase(fileName.toLowerCase());
+                const camelCaseName = kebabToPascal(fileName.toLowerCase());
                 const filePath = path.join(directoryPath, file);
-                const fileContent = fs.readFileSync(filePath, 'utf-8');
+                const fileContent = fs.readFileSync(filePath, 'utf-8').replace(`width=\"24\"`, `width=\"50\"`)
+                    .replace(`height=\"24\"`, `height=\"50\"`);
 
                 return {
                     name: camelCaseName,
