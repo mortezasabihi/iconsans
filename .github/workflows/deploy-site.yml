@@ -20,8 +20,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Dependecies
-        run: yarn bootstrap
+      - name: Yarn Bootstrap
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: bootstrap
 
       - name: Build Site
         run: npx lerna run build --scope=site
