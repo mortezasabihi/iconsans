@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: Install Dependecies
-        run: yarn install --no-lockfile
+        run: yarn install --ignore-scripts --no-lockfile
 
       - name: Build Site
         run: npx lerna run build --scope=site
