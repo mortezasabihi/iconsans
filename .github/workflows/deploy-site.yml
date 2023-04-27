@@ -29,7 +29,9 @@ jobs:
           cmd: bootstrap
 
       - name: Build Site
-        run: npx lerna run build --scope=site
+        run: |
+          touch site/dist/.nojekyll
+          npx lerna run build --scope=site
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
