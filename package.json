@@ -21,6 +21,8 @@
     "xmldom": "^0.6.0"
   },
   "scripts": {
+    "lerna": "lerna",
+    "bootstrap": "yarn --ignore-scripts --silent && lerna bootstrap -- --ignore-scripts",
     "prepublish": "lerna version --no-private --conventional-commits --no-commit-hooks",
     "publish": "lerna publish from-git --verify-access"
   }

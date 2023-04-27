@@ -21,12 +21,10 @@ jobs:
           node-version: 18
 
       - name: Install Dependecies
-        run: |
-          npm install -g lerna
-          lerna bootstrap --ignore-scripts=true --npm-client=npm
+        run: yarn bootstrap
 
       - name: Build Site
-        run: lerna run build --scope=site
+        run: npx lerna run build --scope=site
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
