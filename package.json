@@ -22,7 +22,7 @@
   },
   "scripts": {
     "lerna": "lerna",
-    "bootstrap": "yarn --ignore-scripts --silent && lerna bootstrap -- --ignore-scripts",
+    "bootstrap": "yarn --ignore-scripts --silent && lerna bootstrap --ignore-scripts --npm-client=yarn",
     "prepublish": "lerna version --no-private --conventional-commits --no-commit-hooks",
     "publish": "lerna publish from-git --verify-access"
   }
