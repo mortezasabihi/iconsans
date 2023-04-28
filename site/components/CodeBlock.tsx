@@ -3,7 +3,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/github.css";
 
 const CodeBlock: React.FC<PropsWithChildren> = ({ children }) => {
-  const ref = useRef<HTMLElement>();
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (ref.current) {
