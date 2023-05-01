@@ -1,16 +1,16 @@
 # Iconsans
 
-Iconsans is a collection of over 320 free icons designed for use in your next project. This package offers separate versions for Vue and React, making it easy for developers and designers to access a wide range of icons that can be used in a variety of applications.
+**Iconsans** is a collection of over **320** free icons designed for use in your next project. This package offers separate versions for Vue and React, making it easy for developers and designers to access a wide range of icons that can be used in a variety of applications.
 
 ## Installation
 
-To use iconsans in your Vue project:
+To use iconsans in your **Vue** project:
 
 ```
 npm install @iconsans/vue
 ```
 
-To use iconsans in your React project:
+To use iconsans in your **React** project:
 
 ```
 npm install @iconsans/react
@@ -21,13 +21,25 @@ npm install @iconsans/react
 After installing iconsans, you can use it in your project by importing the icons you need. For example, if you want to use the "play" icon in your Vue project, you can import it like this:
 
 ```js
-import { Play } from "@iconsans/vue";
+<script setup lang="ts">
+    import { Play } from "@iconsans/react";
+</script>
+
+
+<template>
+    <Play />
+</template>
+
 ```
 
 In React, you can import the same icon like this:
 
-```js
-import { Play } from "@iconsans/react";
+```jsx
+import { Play } from "@iconsans/vue";
+
+export default function App() {
+  return <Play />;
+}
 ```
 
 ### Figma Design
