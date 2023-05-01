@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/mortezasabihi/iconsans/compare/@iconsans/vue@0.1.1...@iconsans/vue@0.1.2) (2023-05-01)
+
+### Bug Fixes
+
+- **vue:** type error ([#5](https://github.com/mortezasabihi/iconsans/issues/5)) ([4bb1fda](https://github.com/mortezasabihi/iconsans/commit/4bb1fda2e53e0f2fc33d2afde14cae4e8d6a8561))
+
 ## [0.1.1](https://github.com/mortezasabihi/iconsans/compare/@iconsans/vue@0.1.0...@iconsans/vue@0.1.1) (2023-05-01)
 
 ### Bug Fixes
