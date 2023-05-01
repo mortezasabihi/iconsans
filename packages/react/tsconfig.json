@@ -1,7 +1,20 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "jsx": "react",
-    "declarationDir": "types"
-  }
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
