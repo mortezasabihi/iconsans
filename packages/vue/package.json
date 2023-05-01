@@ -9,10 +9,16 @@
     "url": "https://mortezasabihi.com"
   },
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "directories": {
     "componentns": "componentns"
   },
@@ -30,19 +36,20 @@
     "preconvert": "rimraf components",
     "convert": "yarn preconvert && node ./vue-converter.cjs",
     "prebuild": "rimraf dist && rimraf types",
-    "build:types": "vue-tsc --declaration --emitDeclarationOnly",
-    "build": "yarn prebuild && rollup -c --bundleConfigAsCjs && yarn build:types && rimraf dist/esm/types && rimraf dist/cjs/types && mv types dist/esm && cp -R dist/esm/types dist/cjs"
+    "build": "yarn prebuild && vue-tsc && vite build"
   },
   "bugs": {
     "url": "https://github.com/mortezasabihi/iconsans/issues"
   },
   "homepage": "https://github.com/mortezasabihi/iconsans#readme",
   "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
     "@vue/compiler-sfc": "^3.2.47",
     "rollup-plugin-vue": "^6.0.0",
-    "vue-tsc": "^1.4.4"
+    "vue-tsc": "^1.4.4",
+    "xmldom": "^0.6.0"
   },
-  "peerDependencies": {
+  "dependencies": {
     "vue": "^3.2.47"
   }
 }
