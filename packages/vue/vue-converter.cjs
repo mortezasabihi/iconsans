@@ -64,9 +64,10 @@ fs.readdir(ICONS_DIRECTORY, function (err, files) {
       </template>
 
       <script lang="ts">
-      export default {
+      import { defineComponent } from 'vue'
+      export default defineComponent({
         name: '${componentName}',
-      };
+      })
       </script>
     `;
 
