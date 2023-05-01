@@ -28,7 +28,8 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "Arrow-Left-2-Square",
-};
+});
 </script>

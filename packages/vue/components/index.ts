@@ -321,3 +321,4 @@ export { default as VolumeMinus } from './Volume-Minus.vue';
 export { default as VolumeMute } from './Volume-Mute.vue';
 export { default as VolumePlus } from './Volume-Plus.vue';
 export { default as VolumeSlash } from './Volume-Slash.vue';
+export { default as Wallet3 } from './Wallet-3.vue';
