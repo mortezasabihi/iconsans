@@ -42,6 +42,14 @@ export default function App() {
 }
 ```
 
+## Props
+
+| Name   | Type          |
+| ------ | ------------- |
+| Width  | String,Number |
+| Height | String,Number |
+| Color  | String        |
+
 ### Figma Design
 
 The icons in iconsans were designed using Figma, and you can find the design file in the following link:
