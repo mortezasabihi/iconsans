@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@0.1.1...@iconsans/react@0.1.2) (2023-05-02)
+
+### Bug Fixes
+
+- **react:** dist folder structure ([#7](https://github.com/mortezasabihi/iconsans/issues/7)) ([8a67353](https://github.com/mortezasabihi/iconsans/commit/8a6735321d6ae9281d00f430029cf830241131c9))
+
 ## [0.1.1](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@0.1.0...@iconsans/react@0.1.1) (2023-05-01)
 
 ### Bug Fixes
