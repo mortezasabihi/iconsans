@@ -19,9 +19,9 @@
     "declaration": true,
     "outDir": "dist",
     "declarationDir": "dist",
-    "baseUrl": ".",
-    "types": ["vite/client", "shims-react.d.ts"]
+    "baseUrl": "."
   },
-  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

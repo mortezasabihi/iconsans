@@ -20,7 +20,7 @@
     }
   },
   "directories": {
-    "componentns": "componentns"
+    "src": "src"
   },
   "files": [
     "dist"
@@ -34,9 +34,9 @@
   },
   "scripts": {
     "preconvert": "rimraf components && mkdir components",
-    "convert": "npx @svgr/cli --typescript --replace-attr-values '#00153F=currentColor' --filename-case 'kebab' --no-dimensions --ref --out-dir ./components --ignore-existing -- ../../icons",
+    "convert": "npx @svgr/cli --typescript --replace-attr-values '#00153F=currentColor' --filename-case 'kebab' --no-dimensions --ref --out-dir ./src/components --ignore-existing -- ../../icons && node remove-react-import.cjs",
     "prebuild": "rimraf dist",
-    "build": "yarn prebuild && vite build && mv dist/packages/react/index.* dist && mv dist/packages/react/components/* dist/components && rm -rf dist/packages"
+    "build": "yarn prebuild && vite build"
   },
   "bugs": {
     "url": "https://github.com/mortezasabihi/iconsans/issues"
