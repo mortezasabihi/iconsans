@@ -1,6 +1,6 @@
 {
   "name": "@iconsans/react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "+320 Free Icons for your next project",
   "keywords": [],
   "author": {
@@ -9,14 +9,14 @@
     "url": "https://mortezasabihi.com"
   },
   "license": "MIT",
-  "main": "./dist/packages/react/index.cjs",
-  "module": "./dist/packages/react/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/packages/react/index.js",
-      "require": "./dist/packages/react/index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "directories": {
@@ -36,7 +36,7 @@
     "preconvert": "rimraf components && mkdir components",
     "convert": "npx @svgr/cli --typescript --replace-attr-values '#00153F=currentColor' --filename-case 'kebab' --no-dimensions --ref --out-dir ./components --ignore-existing -- ../../icons",
     "prebuild": "rimraf dist",
-    "build": "yarn prebuild && vite build"
+    "build": "yarn prebuild && vite build && mv dist/packages/react/index.* dist && mv dist/packages/react/components/* dist/components && rm -rf dist/packages"
   },
   "bugs": {
     "url": "https://github.com/mortezasabihi/iconsans/issues"

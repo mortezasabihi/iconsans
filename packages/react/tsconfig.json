@@ -13,7 +13,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "declaration": true,
+    "outDir": "dist",
+    "declarationDir": "dist",
+    "baseUrl": ".",
+    "types": ["vite/client", "shims-react.d.ts"]
   },
   "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
