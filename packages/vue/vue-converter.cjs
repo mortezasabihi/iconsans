@@ -4,7 +4,7 @@ const prettier = require("prettier");
 const { DOMParser, XMLSerializer } = require("xmldom");
 
 const ICONS_DIRECTORY = path.join(__dirname, "../../icons");
-const EXPORT_DIRECTORY = path.join(__dirname, "./components");
+const EXPORT_DIRECTORY = path.join(__dirname, "./src/components");
 
 fs.readdir(ICONS_DIRECTORY, function (err, files) {
   if (err) {

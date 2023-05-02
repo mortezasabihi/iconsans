@@ -33,7 +33,7 @@
     "url": "git+https://github.com/mortezasabihi/iconsans.git"
   },
   "scripts": {
-    "preconvert": "rimraf components",
+    "preconvert": "rimraf src/components",
     "convert": "yarn preconvert && node ./vue-converter.cjs",
     "prebuild": "rimraf dist && rimraf types",
     "build": "yarn prebuild && vue-tsc && vite build"
