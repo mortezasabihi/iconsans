@@ -1,5 +1,5 @@
 import { Grid, Input } from "@mui/material";
-import type { ChangeEventHandler } from "react";
+import type { ChangeEventHandler, FC } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 }
 
-const IconsSearch = ({ text, onChange }: Props) => {
+const IconsSearch: FC<Props> = ({ text, onChange }) => {
   return (
     <Grid item md={12} sm={12} xs={12}>
       <Input
