@@ -49,6 +49,9 @@ To submit a pull request:
 6. Make the appropriate changes for the issue you are trying to address or the feature that you want to add.
 7. Use `git add insert-paths-of-changed-files-here` to add the file contents of the changed files to the "snapshot" git uses to manage the state of the project, also known as the index.
 8. Use `git commit` to store the contents of the index with a descriptive message. Use [conventional commits](https://www.conventionalcommits.org/) to create a nice message.
+   - For changes related to Vue package: `git commit -m "feat(vue): your commit meesage"`
+   - For fixes related to React package: `git commit -m "fix(react): your commit meesage"`
+   - For chore changes related to the site: `git commit -m "chore(site): your commit meesage"`
 9. Push the changes to the remote repository using `git push origin branch-name-here`.
 10. Submit a pull request to the upstream repository.
 11. Title the pull request with a short description of the changes made and the issue or bug number associated with your change. For example, you can title an issue like so `"Added more log outputting to resolve #4352"`.
