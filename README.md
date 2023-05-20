@@ -26,7 +26,7 @@ After installing iconsans, you can use it in your project by importing the icons
 
 ```js
 <script setup lang="ts">
-    import { Play } from "@iconsans/react";
+    import { Play } from "@iconsans/vue";
 </script>
 
 
@@ -39,7 +39,7 @@ After installing iconsans, you can use it in your project by importing the icons
 In React, you can import the same icon like this:
 
 ```jsx
-import { Play } from "@iconsans/vue";
+import { Play } from "@iconsans/react";
 
 export default function App() {
   return <Play />;
