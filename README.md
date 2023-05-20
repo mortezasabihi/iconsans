@@ -54,6 +54,10 @@ export default function App() {
 | Height | String,Number |
 | Color  | String        |
 
+## 🧑‍💻👩‍💻 Contributing
+
+Thank you for your interest in helping! Visit our [guide on contributing](https://github.com/mortezasabihi/iconsans/blob/main/CONTRIBUTING.md) to get started.
+
 ### 🎨 Figma Design
 
 The icons in iconsans were designed using Figma, and you can find the design file in the following link:
