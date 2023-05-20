@@ -1,10 +1,10 @@
 import { Grid, Input } from "@mui/material";
-import React from "react";
+import type { ChangeEventHandler } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
 interface Props {
   text: string;
-  onChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 }
 
 const IconsSearch = ({ text, onChange }: Props) => {
