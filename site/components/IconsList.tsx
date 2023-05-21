@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Icon from "./Icon";
 import IconsSearch from "./IconsSearch";
 
@@ -12,6 +12,7 @@ interface Props {
 
 const IconsList: React.FC<Props> = ({ icons }) => {
   const [text, setText] = useState<string>("");
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value.trim());
@@ -38,9 +39,29 @@ const IconsList: React.FC<Props> = ({ icons }) => {
       </>
     );
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key === "f") {
+        event.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <Grid container spacing={2}>
-      <IconsSearch text={text} onChange={handleChangeText} />
+      <IconsSearch
+        ref={searchInputRef}
+        text={text}
+        onChange={handleChangeText}
+      />
       {renderIcons()}
     </Grid>
   );
