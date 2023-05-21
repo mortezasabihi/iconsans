@@ -15,7 +15,10 @@ fs.readdir(ICONS_DIRECTORY, function (err, files) {
   const svgFiles = files.filter((file) => path.extname(file) === ".svg");
 
   svgFiles.forEach((file) => {
-    const componentName = path.parse(file).name.replace(/\s/g, "-");
+    const componentName = path
+      .parse(file)
+      .name.replace(/\s/g, "")
+      .replaceAll("-", "");
     const componentPath = path.join(EXPORT_DIRECTORY, componentName + ".vue");
     const svgData = fs.readFileSync(path.join(ICONS_DIRECTORY, file), "utf8");
 
@@ -65,6 +68,7 @@ fs.readdir(ICONS_DIRECTORY, function (err, files) {
 
       <script lang="ts">
       import { defineComponent } from 'vue'
+      
       export default defineComponent({
         name: '${componentName}',
       })
@@ -101,8 +105,15 @@ fs.readdir(ICONS_DIRECTORY, function (err, files) {
     )} } from './${componentName}.vue';`;
   });
 
-  fs.writeFileSync(
-    path.join(EXPORT_DIRECTORY, "index.ts"),
-    iconComponents.join("\n")
-  );
+  const indexContent = `
+export { default } from './Iconsans.vue'
+${iconComponents.join("\n")}
+    
+// Type declaration for component names
+export type IconComponentName = ${iconFiles
+    .map((file) => `'${path.parse(file).name.replace(/-/g, "")}'`)
+    .join(" | ")};
+  `;
+
+  fs.writeFileSync(path.join(EXPORT_DIRECTORY, "index.ts"), indexContent);
 });

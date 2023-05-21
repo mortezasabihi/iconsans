@@ -33,7 +33,7 @@
     "url": "git+https://github.com/mortezasabihi/iconsans.git"
   },
   "scripts": {
-    "preconvert": "rimraf src/components",
+    "preconvert": "find src/components ! -name 'Iconsans.vue' -type f -delete",
     "convert": "yarn preconvert && node ./vue-converter.cjs",
     "prebuild": "rimraf dist && rimraf types",
     "build": "yarn prebuild && vue-tsc && vite build"
@@ -41,7 +41,7 @@
   "bugs": {
     "url": "https://github.com/mortezasabihi/iconsans/issues"
   },
-  "homepage": "https://github.com/mortezasabihi/iconsans#readme",
+  "homepage": "https://mortezasabihi.github.io/iconsans",
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.1",
     "@vue/compiler-sfc": "^3.2.47",
