@@ -26,12 +26,13 @@ After installing iconsans, you can use it in your project by importing the icons
 
 ```js
 <script setup lang="ts">
-    import { Play } from "@iconsans/vue";
+    import Iconsans, { Play } from "@iconsans/vue";
 </script>
 
 
 <template>
     <Play />
+    <Iconsans :name="Play" />
 </template>
 
 ```
