@@ -3,3 +3,4 @@ dist
 *-debug.log
 .next
 .env
+.DS_Store
