@@ -50,6 +50,15 @@ const IconsList: React.FC<Props> = ({ icons }) => {
 
   useKeydown(handleSearchKeyDown);
 
+  const handleEscapeKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      searchInputRef.current?.blur();
+    }
+  };
+
+  useKeydown(handleEscapeKeyDown);
+
   return (
     <Grid container spacing={2}>
       <IconsSearch
