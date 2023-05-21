@@ -1,7 +1,8 @@
 import { Grid } from "@mui/material";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Icon from "./Icon";
 import IconsSearch from "./IconsSearch";
+import { useKeydown } from "@/hooks";
 
 interface Props {
   icons: {
@@ -40,20 +41,23 @@ const IconsList: React.FC<Props> = ({ icons }) => {
     );
   };
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if ((event.metaKey || event.ctrlKey) && event.key === "f") {
-        event.preventDefault();
-        searchInputRef.current?.focus();
-      }
-    };
+  const handleSearchKeyDown = (event: KeyboardEvent) => {
+    if ((event.metaKey || event.ctrlKey) && event.key === "f") {
+      event.preventDefault();
+      searchInputRef.current?.focus();
+    }
+  };
 
-    document.addEventListener("keydown", handleKeyDown);
+  useKeydown(handleSearchKeyDown);
 
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
+  const handleEscapeKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      searchInputRef.current?.blur();
+    }
+  };
+
+  useKeydown(handleEscapeKeyDown);
 
   return (
     <Grid container spacing={2}>
