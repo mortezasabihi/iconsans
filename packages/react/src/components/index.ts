@@ -1,3 +1,4 @@
+export * from "./Iconsans";
 export { default as ActivityCircle2 } from "./activity-circle-2";
 export { default as ActivityCircle } from "./activity-circle";
 export { default as ActivitySquare2 } from "./activity-square-2";
