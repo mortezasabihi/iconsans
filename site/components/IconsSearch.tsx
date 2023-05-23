@@ -12,7 +12,7 @@ const IconsSearch = forwardRef(
     return (
       <Grid item md={12} sm={12} xs={12}>
         <Input
-          type="text"
+          type="search"
           fullWidth
           onChange={onChange}
           placeholder="Search Icons..."
