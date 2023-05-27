@@ -1,80 +1,24 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
     <path
-      d="M17 4.75H7C4.79086 4.75 3 6.54086 3 8.75V18C3 20.2091 4.79086 22 7 22H17C19.2091 22 21 20.2091 21 18V8.75C21 6.54086 19.2091 4.75 17 4.75Z"
       stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
       stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      d="M17 4.75H7a4 4 0 0 0-4 4V18a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V8.75a4 4 0 0 0-4-4Zm-9-1.5v3m9-3v3M3 9.75h18"
     />
     <path
-      d="M8 3.25V6.25"
       stroke="currentColor"
-      stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
-    />
-    <path
-      d="M17 3.25V6.25"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M3 9.75H21"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M8 14V14.001"
-      stroke="currentColor"
       stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M12 14V14.001"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M16 14V14.001"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M8 18V18.001"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M12 18V18.001"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M16 18V18.001"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      d="M8 14v.001M12 14v.001M16 14v.001M8 18v.001M12 18v.001M16 18v.001"
     />
   </svg>
 </template>
@@ -83,5 +27,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Calendar",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

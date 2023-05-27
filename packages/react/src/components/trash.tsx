@@ -4,17 +4,18 @@ const SvgTrash = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
-    <g
+    <path
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
-    >
-      <path d="m6 9.13.75 9a2 2 0 0 0 2 2h6.5a2 2 0 0 0 2-2l.75-9M13.5 12.63v4.49M10.5 12.63v4.49M5 6.88h14M14.5 6.88v-2a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v2" />
-    </g>
+      d="m6 9.13.75 9a2 2 0 0 0 2 2h6.5a2 2 0 0 0 2-2l.75-9m-4.5 3.5v4.49m-3-4.49v4.49M5 6.88h14m-4.5 0v-2a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v2"
+    />
   </svg>
 );
 const ForwardRef = forwardRef(SvgTrash);

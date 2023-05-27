@@ -1,42 +1,22 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="More-Square">
+    <g stroke="currentColor">
       <path
-        id="Vector"
-        d="M12 12V12.001"
-        stroke="currentColor"
-        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M16 12V12.001"
-        stroke="currentColor"
         stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        d="M12 12v.001M16 12v.001M8 12v.001"
       />
       <path
-        id="Vector_3"
-        d="M8 12V12.001"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_4"
-        d="M17 3H7C4.79086 3 3 4.79086 3 7V17C3 19.2091 4.79086 21 7 21H17C19.2091 21 21 19.2091 21 17V7C21 4.79086 19.2091 3 17 3Z"
-        stroke="currentColor"
-        stroke-width="1.5"
         stroke-miterlimit="10"
+        stroke-width="1.5"
+        d="M17 3H7a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4Z"
       />
     </g>
   </svg>
@@ -46,5 +26,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "More-Square",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

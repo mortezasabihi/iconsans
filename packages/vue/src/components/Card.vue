@@ -1,27 +1,17 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Card">
+    <g stroke="currentColor" stroke-linejoin="round" stroke-width="1.5">
       <path
-        id="Vector"
-        d="M18 6H6C4.34315 6 3 7.34315 3 9V16C3 17.6569 4.34315 19 6 19H18C19.6569 19 21 17.6569 21 16V9C21 7.34315 19.6569 6 18 6Z"
-        stroke="currentColor"
-        stroke-width="1.5"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        d="M18 6H6a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3Z"
       />
-      <path
-        id="Vector_2"
-        d="M3 11H21"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-      />
+      <path d="M3 11h18" />
     </g>
   </svg>
 </template>
@@ -30,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Card",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

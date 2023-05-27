@@ -1,21 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Play">
-      <path
-        id="Vector"
-        d="M16.25 9.83L9.75 6.08C9.36959 5.86036 8.93802 5.74484 8.49876 5.74506C8.0595 5.74527 7.62805 5.86122 7.24786 6.08123C6.86766 6.30123 6.55215 6.61753 6.33308 6.99826C6.11401 7.379 5.99913 7.81074 6 8.25V15.75C5.99913 16.1893 6.11401 16.621 6.33308 17.0017C6.55215 17.3825 6.86766 17.6988 7.24786 17.9188C7.62805 18.1388 8.0595 18.2547 8.49876 18.2549C8.93802 18.2551 9.36959 18.1396 9.75 17.92L16.25 14.17C16.6298 13.9492 16.945 13.6326 17.1641 13.2518C17.3833 12.871 17.4986 12.4393 17.4986 12C17.4986 11.5607 17.3833 11.129 17.1641 10.7482C16.945 10.3674 16.6298 10.0508 16.25 9.83Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="m16.25 9.83-6.5-3.75A2.5 2.5 0 0 0 6 8.25v7.5a2.5 2.5 0 0 0 3.75 2.17l6.5-3.75a2.51 2.51 0 0 0 0-4.34Z"
+    />
   </svg>
 </template>
 
@@ -23,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Play",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

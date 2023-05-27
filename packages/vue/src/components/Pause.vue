@@ -1,29 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Pause">
-      <path
-        id="Vector"
-        d="M8.5 5.5H5.5C4.67157 5.5 4 6.17157 4 7V17C4 17.8284 4.67157 18.5 5.5 18.5H8.5C9.32843 18.5 10 17.8284 10 17V7C10 6.17157 9.32843 5.5 8.5 5.5Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M18.5 5.5H15.5C14.6716 5.5 14 6.17157 14 7V17C14 17.8284 14.6716 18.5 15.5 18.5H18.5C19.3284 18.5 20 17.8284 20 17V7C20 6.17157 19.3284 5.5 18.5 5.5Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M8.5 5.5h-3A1.5 1.5 0 0 0 4 7v10a1.5 1.5 0 0 0 1.5 1.5h3A1.5 1.5 0 0 0 10 17V7a1.5 1.5 0 0 0-1.5-1.5Zm10 0h-3A1.5 1.5 0 0 0 14 7v10a1.5 1.5 0 0 0 1.5 1.5h3A1.5 1.5 0 0 0 20 17V7a1.5 1.5 0 0 0-1.5-1.5Z"
+    />
   </svg>
 </template>
 
@@ -31,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Pause",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

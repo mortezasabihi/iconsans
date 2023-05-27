@@ -4,17 +4,18 @@ const SvgPlus = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
-    <g
+    <path
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
-    >
-      <path d="M7 12h10M12 7v10" />
-    </g>
+      d="M7 12h10m-5-5v10"
+    />
   </svg>
 );
 const ForwardRef = forwardRef(SvgPlus);

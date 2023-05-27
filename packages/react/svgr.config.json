@@ -1,0 +1,12 @@
+{
+  "typescript": true,
+  "filenameCase": "pascal",
+  "dimensions": false,
+  "ignoreExisting": true,
+  "ref": true,
+  "outDir": "./src/components",
+  "svgProps": {
+    "width": "{props.width || 16}",
+    "height": "{props.height || 16}"
+  }
+}

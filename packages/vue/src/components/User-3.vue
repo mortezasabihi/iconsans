@@ -1,29 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="User-3">
-      <path
-        id="Vector"
-        d="M12 10.88C13.6569 10.88 15 9.53685 15 7.88C15 6.22315 13.6569 4.88 12 4.88C10.3431 4.88 9 6.22315 9 7.88C9 9.53685 10.3431 10.88 12 10.88Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M4.5 19.12V15.81C4.51508 15.3003 4.72431 14.8155 5.08491 14.4549C5.44552 14.0943 5.93025 13.8851 6.44 13.87H17.56C18.0697 13.8851 18.5545 14.0943 18.9151 14.4549C19.2757 14.8155 19.4849 15.3003 19.5 15.81V19.12"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M12 10.88a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-7.5 8.24v-3.31a2 2 0 0 1 1.94-1.94h11.12a2 2 0 0 1 1.94 1.94v3.31"
+    />
   </svg>
 </template>
 
@@ -31,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "User-3",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

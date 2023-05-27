@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@0.1.3...@iconsans/react@0.1.4) (2023-05-27)
+
+### Performance Improvements
+
+- reduce react icon components size ([e486308](https://github.com/mortezasabihi/iconsans/commit/e48630860e2794ff041b79b54b0fd343f5a40bc2))
+
 ## [0.1.3](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@0.1.2...@iconsans/react@0.1.3) (2023-05-02)
 
 ### Bug Fixes
