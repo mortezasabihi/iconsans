@@ -48,11 +48,11 @@ export default function App() {
 
 ## 🖌️ Props
 
-| Name   | Type          |
-| ------ | ------------- |
-| Width  | String,Number |
-| Height | String,Number |
-| Color  | String        |
+| Name   | Type   |
+| ------ | ------ |
+| Width  | Number |
+| Height | Number |
+| Color  | String |
 
 ## 🧑‍💻👩‍💻 Contributing
 
