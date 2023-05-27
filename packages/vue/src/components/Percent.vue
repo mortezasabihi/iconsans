@@ -1,36 +1,14 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Percent">
-      <path
-        id="Vector"
-        d="M9 16.76L14.5 7.24"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M9 7V7.001"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_3"
-        d="M15 17V17.001"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+    <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke-width="1.5" d="m9 16.76 5.5-9.52" />
+      <path stroke-width="2" d="M9 7v.001M15 17v.001" />
     </g>
   </svg>
 </template>
@@ -39,5 +17,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Percent",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

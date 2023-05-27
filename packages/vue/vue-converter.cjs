@@ -22,37 +22,13 @@ fs.readdir(ICONS_DIRECTORY, function (err, files) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(svgData, "image/svg+xml");
 
-    // Replace width and height attributes values with 1em
-    const widthAttr = doc.documentElement.getAttribute("width");
-    if (widthAttr) {
-      doc.documentElement.setAttribute("width", "1em");
-    }
-
-    const heightAttr = doc.documentElement.getAttribute("height");
-    if (heightAttr) {
-      doc.documentElement.setAttribute("height", "1em");
-    }
-
-    // Replace stroke attribute value with currentColor in root element
-    const strokeAttr = doc.documentElement.getAttribute("stroke");
-    if (strokeAttr) {
-      doc.documentElement.setAttribute("stroke", "currentColor");
-    }
-
-    // Replace fill attribute value with currentColor if it's not "none"
-    const fillAttr = doc.documentElement.getAttribute("fill");
-    if (fillAttr && fillAttr !== "none") {
-      doc.documentElement.setAttribute("fill", "currentColor");
-    }
-
-    // Replace stroke attribute value with currentColor in child elements
-    const elements = doc.documentElement.getElementsByTagName("*");
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i];
-      const strokeAttr = element.getAttribute("stroke");
-      if (strokeAttr) {
-        element.setAttribute("stroke", "currentColor");
-      }
+    function addSizeAttributes(svgString) {
+      const closingTagIndex = svgString.indexOf(">");
+      const openingTag = svgString.slice(0, closingTagIndex);
+      const closingTag = svgString.slice(closingTagIndex);
+      const sizeAttributes = ` :width="width" :height="height"`;
+      const newOpeningTag = openingTag + sizeAttributes;
+      return newOpeningTag + closingTag;
     }
 
     const serializer = new XMLSerializer();
@@ -60,13 +36,25 @@ fs.readdir(ICONS_DIRECTORY, function (err, files) {
 
     const vueComponent = `
       <template>
-        ${svgString}
+        ${addSizeAttributes(svgString)}
       </template>
 
       <script lang="ts">
       import { defineComponent } from 'vue'
       export default defineComponent({
         name: '${componentName}',
+        props: {
+          width: {
+            required: false,
+            type: Number,
+            default: () => 16
+          },
+          height: {
+            required: false,
+            type: Number,
+            default: () => 16
+          }
+        }
       })
       </script>
     `;

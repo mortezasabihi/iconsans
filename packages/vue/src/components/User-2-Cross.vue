@@ -1,45 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="User-2-Cross">
-      <path
-        id="Vector"
-        d="M11.8301 9.5C13.4869 9.5 14.8301 8.15685 14.8301 6.5C14.8301 4.84315 13.4869 3.5 11.8301 3.5C10.1732 3.5 8.83008 4.84315 8.83008 6.5C8.83008 8.15685 10.1732 9.5 11.8301 9.5Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M14.8301 20H6.27008C5.75556 20 5.26211 19.7956 4.89829 19.4318C4.53447 19.068 4.33008 18.5745 4.33008 18.06V14.44C4.33008 13.9255 4.53447 13.432 4.89829 13.0682C5.26211 12.7044 5.75556 12.5 6.27008 12.5H14.8301"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_3"
-        d="M16.49 17.84L19.67 14.66"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_4"
-        d="M16.49 14.66L19.67 17.84"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M11.83 9.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm3 10.5H6.27a1.94 1.94 0 0 1-1.94-1.94v-3.62a1.94 1.94 0 0 1 1.94-1.94h8.56m1.66 5.34 3.18-3.18m-3.18 0 3.18 3.18"
+    />
   </svg>
 </template>
 
@@ -47,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "User-2-Cross",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

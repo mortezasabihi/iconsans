@@ -1,28 +1,21 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Tag">
+    <g
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    >
       <path
-        id="Vector"
-        d="M12.11 4.81999L4.82 12.11C4.63405 12.2957 4.48653 12.5163 4.38588 12.7591C4.28523 13.0019 4.23343 13.2622 4.23343 13.525C4.23343 13.7878 4.28523 14.0481 4.38588 14.2909C4.48653 14.5337 4.63405 14.7542 4.82 14.94L9.06 19.18C9.24575 19.3659 9.46633 19.5135 9.70912 19.6141C9.95192 19.7148 10.2122 19.7666 10.475 19.7666C10.7378 19.7666 10.9981 19.7148 11.2409 19.6141C11.4837 19.5135 11.7043 19.3659 11.89 19.18L19.18 11.89C19.3939 11.6779 19.5572 11.4203 19.6576 11.1363C19.7581 10.8524 19.7931 10.5494 19.76 10.25L19.33 6.42999C19.2787 5.98091 19.0768 5.56246 18.7571 5.24284C18.4375 4.92323 18.0191 4.72131 17.57 4.66999L13.75 4.23999C13.4506 4.20693 13.1476 4.24192 12.8636 4.34235C12.5797 4.44278 12.322 4.60606 12.11 4.81999Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        d="m12.11 4.82-7.29 7.29a2 2 0 0 0 0 2.83l4.24 4.24a2 2 0 0 0 2.83 0l7.29-7.29a2 2 0 0 0 .58-1.64l-.43-3.82a2 2 0 0 0-1.76-1.76l-3.82-.43a2 2 0 0 0-1.64.58Z"
       />
-      <path
-        id="Vector_2"
-        d="M14.72 11.28C15.8246 11.28 16.72 10.3846 16.72 9.28C16.72 8.17543 15.8246 7.28 14.72 7.28C13.6154 7.28 12.72 8.17543 12.72 9.28C12.72 10.3846 13.6154 11.28 14.72 11.28Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <path d="M14.72 11.28a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
     </g>
   </svg>
 </template>
@@ -31,5 +24,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Tag",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

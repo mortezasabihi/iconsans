@@ -1,26 +1,16 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Discover">
+    <g stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5">
       <path
-        id="Vector"
-        d="M8.55001 6.91001L16.34 5.07001C16.6977 4.98185 17.072 4.98749 17.4268 5.0864C17.7817 5.18531 18.105 5.37414 18.3654 5.6346C18.6259 5.89507 18.8147 6.21836 18.9136 6.57319C19.0125 6.92801 19.0182 7.30236 18.93 7.66001L17.09 15.45C16.9923 15.847 16.7879 16.2097 16.4988 16.4988C16.2097 16.7879 15.847 16.9923 15.45 17.09L7.66001 18.93C7.30236 19.0182 6.92801 19.0125 6.57319 18.9136C6.21836 18.8147 5.89507 18.6259 5.6346 18.3654C5.37414 18.105 5.18531 17.7817 5.0864 17.4268C4.98749 17.072 4.98185 16.6977 5.07001 16.34L6.91001 8.55001C7.00768 8.15302 7.21214 7.79032 7.50123 7.50123C7.79032 7.21214 8.15302 7.00768 8.55001 6.91001Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
+        d="m8.55 6.91 7.79-1.84a2.14 2.14 0 0 1 2.59 2.59l-1.84 7.79a2.24 2.24 0 0 1-1.64 1.64l-7.79 1.84a2.14 2.14 0 0 1-2.59-2.59l1.84-7.79a2.24 2.24 0 0 1 1.64-1.64Z"
       />
-      <path
-        id="Vector_2"
-        d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
-      />
+      <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
     </g>
   </svg>
 </template>
@@ -29,5 +19,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Discover",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

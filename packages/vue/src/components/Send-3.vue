@@ -1,27 +1,16 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Send-3">
+    <g stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5">
       <path
-        id="Vector"
-        d="M8.69001 7.34001L16.21 11.11C16.3738 11.1939 16.5113 11.3214 16.6073 11.4785C16.7033 11.6355 16.754 11.816 16.754 12C16.754 12.1841 16.7033 12.3645 16.6073 12.5216C16.5113 12.6786 16.3738 12.8061 16.21 12.89L8.69001 16.66C8.5022 16.7566 8.28864 16.7912 8.07993 16.759C7.87123 16.7267 7.67809 16.6292 7.52821 16.4804C7.37833 16.3317 7.27939 16.1393 7.24558 15.9308C7.21177 15.7223 7.24483 15.5085 7.34001 15.32L8.78001 12.45C8.85034 12.3104 8.88698 12.1563 8.88698 12C8.88698 11.8437 8.85034 11.6896 8.78001 11.55L7.34001 8.68001C7.24483 8.49149 7.21177 8.27768 7.24558 8.06922C7.27939 7.86076 7.37833 7.66835 7.52821 7.51958C7.67809 7.37081 7.87123 7.2733 8.07993 7.24104C8.28864 7.20879 8.5022 7.24343 8.69001 7.34001Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
+        d="m8.69 7.34 7.52 3.77a1 1 0 0 1 0 1.78l-7.52 3.77a1 1 0 0 1-1.35-1.34l1.44-2.87a1 1 0 0 0 0-.9L7.34 8.68a1 1 0 0 1 1.35-1.34Z"
       />
-      <path
-        id="Vector_2"
-        d="M9 12H11"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-      />
+      <path stroke-linecap="round" d="M9 12h2" />
     </g>
   </svg>
 </template>
@@ -30,5 +19,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Send-3",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

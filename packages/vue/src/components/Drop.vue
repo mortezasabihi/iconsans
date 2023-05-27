@@ -1,21 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Drop">
-      <path
-        id="Vector"
-        d="M17 14.73C17 16.0561 16.4732 17.3278 15.5355 18.2655C14.5979 19.2032 13.3261 19.73 12 19.73C10.6739 19.73 9.40215 19.2032 8.46447 18.2655C7.52678 17.3278 7 16.0561 7 14.73C7 12 12 4.26999 12 4.26999C12 4.26999 17 12 17 14.73Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M17 14.73a5 5 0 0 1-10 0C7 12 12 4.27 12 4.27s5 7.73 5 10.46Z"
+    />
   </svg>
 </template>
 
@@ -23,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Drop",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>
