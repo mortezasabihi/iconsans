@@ -7,17 +7,18 @@ const SvgAsterisk = (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
-    <g
+    <path
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
-    >
-      <path d="m8.46 8.46 7.08 7.08M15.54 8.46l-7.08 7.08M17 12H7M12 17V7" />
-    </g>
+      d="m8.46 8.46 7.08 7.08m0-7.08-7.08 7.08M17 12H7m5 5V7"
+    />
   </svg>
 );
 const ForwardRef = forwardRef(SvgAsterisk);

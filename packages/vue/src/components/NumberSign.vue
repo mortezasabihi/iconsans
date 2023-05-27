@@ -1,77 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="NumberSign">
-      <path
-        id="Vector"
-        d="M6 9.75H18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M6 14.25H18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_3"
-        d="M6 9.75H18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_4"
-        d="M6 14.25H18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_5"
-        d="M14.25 6V18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_6"
-        d="M9.75 6V18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_7"
-        d="M14.25 6V18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_8"
-        d="M9.75 6V18"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M6 9.75h12m-12 4.5h12M6 9.75h12m-12 4.5h12M14.25 6v12M9.75 6v12m4.5-12v12M9.75 6v12"
+    />
   </svg>
 </template>
 
@@ -79,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "NumberSign",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

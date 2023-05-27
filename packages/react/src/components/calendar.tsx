@@ -7,6 +7,8 @@ const SvgCalendar = (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
@@ -15,7 +17,7 @@ const SvgCalendar = (
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
-      d="M17 4.75H7a4 4 0 0 0-4 4V18a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V8.75a4 4 0 0 0-4-4ZM8 3.25v3M17 3.25v3M3 9.75h18"
+      d="M17 4.75H7a4 4 0 0 0-4 4V18a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V8.75a4 4 0 0 0-4-4Zm-9-1.5v3m9-3v3M3 9.75h18"
     />
     <path
       stroke="currentColor"

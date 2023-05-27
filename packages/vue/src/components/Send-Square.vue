@@ -1,36 +1,21 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Send-Square">
+    <g
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    >
       <path
-        id="Vector"
-        d="M21 16.99V6.99C21 4.78086 19.2091 2.99 17 2.99L7 2.99C4.79086 2.99 3 4.78086 3 6.99V16.99C3 19.1991 4.79086 20.99 7 20.99H17C19.2091 20.99 21 19.1991 21 16.99Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        d="M21 16.99v-10a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4Zm-5.46-8.53-7.07 7.07"
       />
-      <path
-        id="Vector_2"
-        d="M15.54 8.46L8.46997 15.53"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_3"
-        d="M11.29 8.46H15.54V12.71"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+      <path d="M11.29 8.46h4.25v4.25" />
     </g>
   </svg>
 </template>
@@ -39,5 +24,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Send-Square",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

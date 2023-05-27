@@ -7,17 +7,18 @@ const SvgReceive = (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
-    <g
+    <path
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
-    >
-      <path d="m16.24 7.75-8.48 8.49M11.15 7.75h5.09v5.1" />
-    </g>
+      d="m16.24 7.75-8.48 8.49m3.39-8.49h5.09v5.1"
+    />
   </svg>
 );
 const ForwardRef = forwardRef(SvgReceive);

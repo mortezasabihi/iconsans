@@ -1,45 +1,17 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
     <path
-      d="M19 16H5"
       stroke="currentColor"
-      stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
-    />
-    <path
-      d="M13 12H5"
-      stroke="currentColor"
       stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M13 8H5"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M17 13V8"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M15.2 11.2L17 13L18.8 11.2"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      d="M19 16H5m8-4H5m8-4H5m12 5V8m-1.8 3.2L17 13l1.8-1.8"
     />
   </svg>
 </template>
@@ -48,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Sort-2",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

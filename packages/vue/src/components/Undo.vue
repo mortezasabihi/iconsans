@@ -1,28 +1,19 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Undo">
-      <path
-        id="Vector"
-        d="M4.41998 16.92H16.42C17.4808 16.92 18.4983 16.4986 19.2484 15.7484C19.9986 14.9983 20.42 13.9809 20.42 12.92C20.42 11.8591 19.9986 10.8417 19.2484 10.0916C18.4983 9.34143 17.4808 8.92 16.42 8.92H4.41998"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M5.42002 7L3.58002 8.85L5.42002 10.7"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+    <g
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    >
+      <path d="M4.42 16.92h12a4 4 0 1 0 0-8h-12" />
+      <path d="M5.42 7 3.58 8.85l1.84 1.85" />
     </g>
   </svg>
 </template>
@@ -31,5 +22,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Undo",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

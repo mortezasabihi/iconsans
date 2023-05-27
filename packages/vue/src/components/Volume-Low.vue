@@ -1,29 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Volume-Low">
-      <path
-        id="Vector"
-        d="M5.29 16.5V7.49997C5.29 7.10215 5.44804 6.72062 5.72934 6.43931C6.01065 6.15801 6.39218 5.99997 6.79 5.99997H8.68C9.07548 5.99888 9.46175 5.88056 9.79 5.65997L13 3.54997C13.2254 3.41028 13.4838 3.33284 13.7488 3.32552C14.0139 3.31821 14.2761 3.38128 14.5089 3.50833C14.7416 3.63537 14.9365 3.82184 15.0738 4.04874C15.211 4.27563 15.2856 4.53485 15.29 4.79997V19.2C15.2856 19.4651 15.211 19.7243 15.0738 19.9512C14.9365 20.1781 14.7416 20.3646 14.5089 20.4916C14.2761 20.6187 14.0139 20.6817 13.7488 20.6744C13.4838 20.6671 13.2254 20.5897 13 20.45L9.79 18.34C9.46175 18.1194 9.07548 18.0011 8.68 18H6.79C6.39218 18 6.01065 17.8419 5.72934 17.5606C5.44804 17.2793 5.29 16.8978 5.29 16.5Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M17.68 9.71997C18.0062 10.0443 18.2651 10.4299 18.4418 10.8547C18.6185 11.2795 18.7094 11.7349 18.7094 12.195C18.7094 12.655 18.6185 13.1105 18.4418 13.5352C18.2651 13.96 18.0062 14.3456 17.68 14.67"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M5.29 16.5v-9A1.5 1.5 0 0 1 6.79 6h1.89a2 2 0 0 0 1.11-.34L13 3.55a1.5 1.5 0 0 1 2.29 1.25v14.4A1.5 1.5 0 0 1 13 20.45l-3.21-2.11A2 2 0 0 0 8.68 18H6.79a1.5 1.5 0 0 1-1.5-1.5Zm12.39-6.78a3.49 3.49 0 0 1 0 4.95"
+    />
   </svg>
 </template>
 
@@ -31,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Volume-Low",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

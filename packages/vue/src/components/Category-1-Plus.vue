@@ -1,53 +1,18 @@
 <template>
   <svg
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
   >
-    <g id="Category-1-Plus">
-      <path
-        id="Vector"
-        d="M9 4.5H6C5.17157 4.5 4.5 5.17157 4.5 6V9C4.5 9.82843 5.17157 10.5 6 10.5H9C9.82843 10.5 10.5 9.82843 10.5 9V6C10.5 5.17157 9.82843 4.5 9 4.5Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_2"
-        d="M9 13.5H6C5.17157 13.5 4.5 14.1716 4.5 15V18C4.5 18.8284 5.17157 19.5 6 19.5H9C9.82843 19.5 10.5 18.8284 10.5 18V15C10.5 14.1716 9.82843 13.5 9 13.5Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_3"
-        d="M18 13.5H15C14.1716 13.5 13.5 14.1716 13.5 15V18C13.5 18.8284 14.1716 19.5 15 19.5H18C18.8284 19.5 19.5 18.8284 19.5 18V15C19.5 14.1716 18.8284 13.5 18 13.5Z"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_4"
-        d="M14 8H19"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        id="Vector_5"
-        d="M16.5 5.5V10.5"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </g>
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M9 4.5H6A1.5 1.5 0 0 0 4.5 6v3A1.5 1.5 0 0 0 6 10.5h3A1.5 1.5 0 0 0 10.5 9V6A1.5 1.5 0 0 0 9 4.5Zm0 9H6A1.5 1.5 0 0 0 4.5 15v3A1.5 1.5 0 0 0 6 19.5h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 9 13.5Zm9 0h-3a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5ZM14 8h5m-2.5-2.5v5"
+    />
   </svg>
 </template>
 
@@ -55,5 +20,17 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Category-1-Plus",
+  props: {
+    width: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: Number,
+      default: () => 16,
+    },
+  },
 });
 </script>

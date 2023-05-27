@@ -4,12 +4,14 @@ const SvgCart = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
     <path
       fill="currentColor"
-      d="M9.25 18.81a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM17.25 18.81a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+      d="M9.25 18.81a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
     />
     <path
       stroke="currentColor"
