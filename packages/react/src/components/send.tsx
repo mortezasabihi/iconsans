@@ -4,17 +4,18 @@ const SvgSend = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
-    <g
+    <path
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
-    >
-      <path d="m7.76 16.24 8.48-8.49M12.85 16.24H7.76v-5.09" />
-    </g>
+      d="m7.76 16.24 8.48-8.49m-3.39 8.49H7.76v-5.09"
+    />
   </svg>
 );
 const ForwardRef = forwardRef(SvgSend);

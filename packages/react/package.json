@@ -34,7 +34,7 @@
   },
   "scripts": {
     "preconvert": "rimraf src/components && mkdir src/components",
-    "convert": "npx @svgr/cli --typescript --replace-attr-values '#00153F=currentColor' --filename-case 'kebab' --no-dimensions --ref --out-dir ./src/components --ignore-existing -- ../../icons && node remove-react-import.cjs",
+    "convert": "npx @svgr/cli --config-file ./svgr.config.json -- ../../icons && node remove-react-import.cjs",
     "prebuild": "rimraf dist",
     "build": "yarn prebuild && vite build"
   },

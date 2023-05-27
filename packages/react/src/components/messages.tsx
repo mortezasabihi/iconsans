@@ -7,6 +7,8 @@ const SvgMessages = (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
+    width={props.width || 16}
+    height={props.height || 16}
     ref={ref}
     {...props}
   >
@@ -25,7 +27,7 @@ const SvgMessages = (
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-        d="M7.45 11.85v.001M10.45 11.85v.001M13.45 11.85v.001"
+        d="M7.45 11.85v.001m3-.001v.001m3-.001v.001"
       />
     </g>
   </svg>
