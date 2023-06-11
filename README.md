@@ -1,4 +1,6 @@
 # 🎉 Iconsans
+<sup>Vue:</sup> ![npm](https://img.shields.io/npm/dw/@iconsans/vue?style=plastic)
+<sup>React:</sup> ![npm](https://img.shields.io/npm/dw/@iconsans/react?style=plastic)
 
 **Iconsans** is a collection of over **320** free icons designed for use in your next project. This package offers separate versions for Vue and React, making it easy for developers and designers to access a wide range of icons that can be used in a variety of applications.
 
