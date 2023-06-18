@@ -6,6 +6,7 @@ export default function Document() {
     <Html lang="en" className={roboto.className}>
       <Head>
         <title>Iconsans - +320 Free Icons for your next project</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body>
         <Main />
