@@ -36,7 +36,14 @@ const Icon: React.FC<Props> = ({ name, svg }) => {
           }}
         >
           <Box
-            sx={{ display: "flex", justifyContent: "center", mb: 4 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+              mb: 4,
+            }}
+            width={50}
+            height={50}
             dangerouslySetInnerHTML={{ __html: svg }}
           />
           <Typography variant="body2" align="center">
