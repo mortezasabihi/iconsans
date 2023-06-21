@@ -12,5 +12,13 @@ module.exports = {
     {
       name: "removeDimensions",
     },
+    {
+      name: "convertPathData",
+      params: { noSpaceAfterFlags: false },
+    },
+    {
+      name: "mergePaths",
+      params: { noSpaceAfterFlags: false },
+    },
   ],
 };

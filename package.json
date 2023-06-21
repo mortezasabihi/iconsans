@@ -24,6 +24,6 @@
     "bootstrap": "yarn --ignore-scripts --silent && lerna bootstrap --ignore-scripts --npm-client=yarn",
     "prepublish": "lerna version --no-private --conventional-commits --no-commit-hooks",
     "publish": "lerna publish from-git --verify-access",
-    "optimize:icons": "svgo -f ./icons"
+    "optimize:icons": "svgo -f ./icons -r"
   }
 }
