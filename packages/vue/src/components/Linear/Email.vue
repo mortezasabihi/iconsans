@@ -1,0 +1,44 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
+  >
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="M18.6 4H5.4A3.4 3.4 0 0 0 2 7.4v9.2A3.4 3.4 0 0 0 5.4 20h13.2a3.4 3.4 0 0 0 3.4-3.4V7.4A3.4 3.4 0 0 0 18.6 4Z"
+    />
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="m6 9 4.84 3.17a2 2 0 0 0 2.32 0L18 9"
+    />
+  </svg>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "Email",
+  props: {
+    width: {
+      required: false,
+      type: [Number, String],
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: [Number, String],
+      default: () => 16,
+    },
+  },
+});
+</script>
