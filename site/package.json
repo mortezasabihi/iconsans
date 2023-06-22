@@ -8,7 +8,8 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"next dev\" \"ts-node --esm ./scripts/generate-data.ts\"",
+    "dev": "concurrently \"next dev\" \"yarn generate:data\"",
+    "generate:data": "ts-node --esm ./scripts/generate-data.ts",
     "build": "next build",
     "start": "next start",
     "serve": "serve dist",

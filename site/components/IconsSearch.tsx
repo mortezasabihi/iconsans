@@ -10,7 +10,7 @@ interface Props {
 const IconsSearch = forwardRef(
   ({ text, onChange, ...rest }: Props, ref: ForwardedRef<HTMLInputElement>) => {
     return (
-      <Grid item md={12} sm={12} xs={12}>
+      <Grid item md={10} sm={9} xs={8}>
         <Input
           type="search"
           fullWidth
