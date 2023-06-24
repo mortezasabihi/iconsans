@@ -9,21 +9,22 @@
     "url": "https://mortezasabihi.com"
   },
   "license": "MIT",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+    "./linear": {
+      "import": "./dist/linear.js",
+      "require": "./dist/linear.cjs"
+    },
+    "./bold": {
+      "import": "./dist/bold.js",
+      "require": "./dist/bold.cjs"
     }
   },
   "directories": {
     "src": "src"
   },
   "files": [
-    "dist"
+    "dist/*"
   ],
   "publishConfig": {
     "access": "public"
@@ -33,8 +34,7 @@
     "url": "git+https://github.com/mortezasabihi/iconsans.git"
   },
   "scripts": {
-    "preconvert": "rimraf src/components && mkdir src/components",
-    "convert": "npx @svgr/cli --config-file ./svgr.config.json -- ../../icons && node remove-react-import.cjs",
+    "convert": "npx @svgr/cli --config-file ./svgr.config.json -- ../../icons",
     "prebuild": "rimraf dist",
     "build": "yarn prebuild && vite build"
   },
