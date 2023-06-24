@@ -9,21 +9,22 @@
     "url": "https://mortezasabihi.com"
   },
   "license": "MIT",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+    "./linear": {
+      "import": "./dist/linear.js",
+      "require": "./dist/linear.cjs"
+    },
+    "./bold": {
+      "import": "./dist/bold.js",
+      "require": "./dist/bold.cjs"
     }
   },
   "directories": {
-    "componentns": "componentns"
+    "src": "src"
   },
   "files": [
-    "dist"
+    "dist/*"
   ],
   "publishConfig": {
     "access": "public"

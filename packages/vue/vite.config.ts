@@ -8,7 +8,10 @@ export default defineConfig({
         outDir: "dist",
         sourcemap: true,
         lib: {
-            entry: path.resolve(__dirname, "./src/index.ts"),
+            entry: {
+                linear: path.resolve(__dirname, "./src/components/Linear/index.ts"),
+                bold: path.resolve(__dirname, "./src/components/Bold/index.ts"),
+            },
             name: '@iconsans/vue',
             fileName: '[name]',
             formats: ['es', 'cjs']
