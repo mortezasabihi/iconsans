@@ -30,12 +30,12 @@ function generateVueComponent(componentName, svgString) {
         width: {
           required: false,
           type: [Number, String],
-          default: () => 16
+          default: () => "1em"
         },
         height: {
           required: false,
           type: [Number, String],
-          default: () => 16
+          default: () => "1em"
         }
       }
     })

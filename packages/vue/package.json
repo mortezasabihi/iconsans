@@ -42,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/mortezasabihi/iconsans/issues"
   },
-  "homepage": "https://github.com/mortezasabihi/iconsans#readme",
+  "homepage": "https://mortezasabihi.github.io/iconsans",
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.1",
     "@vue/compiler-sfc": "^3.2.47",
