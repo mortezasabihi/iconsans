@@ -34,6 +34,7 @@
     "url": "git+https://github.com/mortezasabihi/iconsans.git"
   },
   "scripts": {
+    "preconvert": "rimraf src/components",
     "convert": "npx @svgr/cli --config-file ./svgr.config.json -- ../../icons",
     "prebuild": "rimraf dist",
     "build": "yarn prebuild && vite build"
