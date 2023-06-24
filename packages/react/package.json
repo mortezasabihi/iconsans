@@ -42,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/mortezasabihi/iconsans/issues"
   },
-  "homepage": "https://github.com/mortezasabihi/iconsans#readme",
+  "homepage": "https://mortezasabihi.github.io/iconsans",
   "peerDependencies": {
     "react": "^18.2.0"
   },
