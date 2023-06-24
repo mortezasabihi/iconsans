@@ -1,4 +1,5 @@
 # 🎉 Iconsans
+
 <sup>Vue:</sup> ![npm](https://img.shields.io/npm/dw/@iconsans/vue?style=plastic)
 <sup>React:</sup> ![npm](https://img.shields.io/npm/dw/@iconsans/react?style=plastic)
 
@@ -28,12 +29,14 @@ After installing iconsans, you can use it in your project by importing the icons
 
 ```js
 <script setup lang="ts">
-    import { Play } from "@iconsans/vue";
+    import { Play as PlayBold } from "@iconsans/vue/bold";
+    import { Play as PlayLinear } from "@iconsans/vue/linear";
 </script>
 
 
 <template>
-    <Play />
+    <PlayBold />
+    <PlayLinear />
 </template>
 
 ```
@@ -41,20 +44,26 @@ After installing iconsans, you can use it in your project by importing the icons
 In React, you can import the same icon like this:
 
 ```jsx
-import { Play } from "@iconsans/react";
+import { Play as PlayBold } from "@iconsans/react/bold";
+import { Play as PlayLinear } from "@iconsans/react/linear";
 
 export default function App() {
-  return <Play />;
+  return (
+    <>
+      <PlayBold />
+      <PlayLinear />
+    </>
+  );
 }
 ```
 
 ## 🖌️ Props
 
-| Name   | Type   |
-| ------ | ------ |
-| Width  | Number |
-| Height | Number |
-| Color  | String |
+| Name    | Type           |
+| ------- | -------------- |
+| Width?  | Number, String |
+| Height? | Number, String |
+| Color?  | String         |
 
 ## 🧑‍💻👩‍💻 Contributing
 
