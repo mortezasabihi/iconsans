@@ -1,0 +1,34 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    :width="width"
+    :height="height"
+  >
+    <path
+      fill="currentColor"
+      d="M11.31 3.55 8.15 5.66A2 2 0 0 1 7 6H5.15a1.5 1.5 0 0 0-1.5 1.5v9a1.5 1.5 0 0 0 1.5 1.5H7a2 2 0 0 1 1.11.34l3.16 2.11a1.51 1.51 0 0 0 2.34-1.25V4.8a1.51 1.51 0 0 0-2.3-1.25Zm8.1 8.95 1.47-1.5a.739.739 0 0 0 0-1.06.75.75 0 0 0-1.06 0l-1.47 1.47L16.88 10a.75.75 0 0 0-1.06 1l1.47 1.47L15.82 14a.75.75 0 0 0 1.06 1.06l1.47-1.47L19.82 15a.739.739 0 0 0 .53.22.708.708 0 0 0 .53-.22.739.739 0 0 0 0-1.06l-1.47-1.44Z"
+    />
+  </svg>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "VolumeMute",
+  props: {
+    width: {
+      required: false,
+      type: [Number, String],
+      default: () => 16,
+    },
+    height: {
+      required: false,
+      type: [Number, String],
+      default: () => 16,
+    },
+  },
+});
+</script>
