@@ -26,11 +26,8 @@
       "require": "./dist/bold.cjs"
     }
   },
-  "directories": {
-    "components": "components"
-  },
   "files": [
-    "dist/*"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -54,7 +51,7 @@
   },
   "devDependencies": {
     "@svgr/cli": "^7.0.0",
-    "@types/react": "^18.0.38",
-    "@vitejs/plugin-react": "^4.0.0"
+    "@types/react": "^18.2.14",
+    "@vitejs/plugin-react": "^4.0.1"
   }
 }
