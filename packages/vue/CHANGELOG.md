@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/mortezasabihi/iconsans/compare/@iconsans/vue@1.0.2...@iconsans/vue@1.0.3) (2023-06-25)
+
+**Note:** Version bump only for package @iconsans/vue
+
 ## [1.0.2-alpha.0](https://github.com/mortezasabihi/iconsans/compare/@iconsans/vue@1.0.1...@iconsans/vue@1.0.2-alpha.0) (2023-06-25)
 
 ### Bug Fixes
