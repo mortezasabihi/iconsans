@@ -1,6 +1,6 @@
 {
   "name": "@iconsans/react",
-  "version": "1.0.6-alpha.1",
+  "version": "1.0.6-alpha.2",
   "description": "+320 Free Icons for your next project, featuring a bold and linear style that will make your designs stand out. ",
   "keywords": [
     "iconsans",
@@ -28,7 +28,7 @@
     }
   },
   "files": [
-    "dist/*",
+    "dist",
     "bold.d.ts",
     "linear.d.ts",
     "index.d.ts"

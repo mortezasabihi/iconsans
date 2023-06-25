@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6-alpha.2](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@1.0.6-alpha.1...@iconsans/react@1.0.6-alpha.2) (2023-06-25)
+
+### Bug Fixes
+
+- **react:** change 'dist/\*' to 'dist' in the files array in package.json ([b3878ca](https://github.com/mortezasabihi/iconsans/commit/b3878ca3321719acfb068628a67cdbcaba5282c1))
+
 ## [1.0.6-alpha.1](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@1.0.6-alpha.0...@iconsans/react@1.0.6-alpha.1) (2023-06-25)
 
 **Note:** Version bump only for package @iconsans/react
