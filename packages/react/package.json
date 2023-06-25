@@ -1,6 +1,6 @@
 {
   "name": "@iconsans/react",
-  "version": "1.0.4-alpha.1",
+  "version": "1.0.4-alpha.2",
   "description": "+320 Free Icons for your next project",
   "keywords": [
     "iconsans",
@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "type": "module",
+  "types": "./index.d.ts",
   "exports": {
     "./linear": {
       "import": "./dist/linear.js",
@@ -27,7 +28,10 @@
     }
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "bold.d.ts",
+    "linear.d.ts",
+    "index.d.ts"
   ],
   "publishConfig": {
     "access": "public"

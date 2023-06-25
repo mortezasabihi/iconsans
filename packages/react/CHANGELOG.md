@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4-alpha.2](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@1.0.4-alpha.1...@iconsans/react@1.0.4-alpha.2) (2023-06-25)
+
+### Bug Fixes
+
+- **react:** add type defenitions ([e96872d](https://github.com/mortezasabihi/iconsans/commit/e96872d4e4e3e211622aeaa7a021f0dfa6ef0c85))
+
 ## [1.0.4-alpha.1](https://github.com/mortezasabihi/iconsans/compare/@iconsans/react@1.0.4-alpha.0...@iconsans/react@1.0.4-alpha.1) (2023-06-25)
 
 ### Bug Fixes
