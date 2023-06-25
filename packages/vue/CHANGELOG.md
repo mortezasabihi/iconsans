@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.0](https://github.com/mortezasabihi/iconsans/compare/@iconsans/vue@1.0.1...@iconsans/vue@1.0.2-alpha.0) (2023-06-25)
+
+### Bug Fixes
+
+- **vue:** add type defenitions ([f7abafd](https://github.com/mortezasabihi/iconsans/commit/f7abafd99ab19c4bf4660333bc6ec72d86ff23b1))
+
+## [1.0.2](https://github.com/mortezasabihi/iconsans/compare/@iconsans/vue@1.0.1...@iconsans/vue@1.0.2) (2023-06-25)
+
+### Bug Fixes
+
+- **vue:** add type defenitions ([9ee5484](https://github.com/mortezasabihi/iconsans/commit/9ee5484f41a50b2ac79a3a65b45a32fb7248dd74))
+
 ## [0.1.3](https://github.com/mortezasabihi/iconsans/compare/@iconsans/vue@0.1.2...@iconsans/vue@0.1.3) (2023-05-27)
 
 ### Performance Improvements
