@@ -2,7 +2,13 @@
   "name": "@iconsans/react",
   "version": "1.0.2",
   "description": "+320 Free Icons for your next project",
-  "keywords": [],
+  "keywords": [
+    "iconsans",
+    "icons",
+    "pack",
+    "react",
+    "svg"
+  ],
   "author": {
     "name": "Morteza Sabihi",
     "email": "morteza.sabihi@gmail.com",
@@ -21,7 +27,7 @@
     }
   },
   "directories": {
-    "src": "src"
+    "components": "components"
   },
   "files": [
     "dist/*"
