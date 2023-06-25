@@ -1,6 +1,6 @@
 {
   "name": "@iconsans/react",
-  "version": "1.0.5",
+  "version": "1.0.6-alpha.0",
   "description": "+320 Free Icons for your next project, featuring a bold and linear style that will make your designs stand out. ",
   "keywords": [
     "iconsans",
@@ -34,7 +34,10 @@
     "index.d.ts"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "ignore": [
+      "!dist"
+    ]
   },
   "repository": {
     "type": "git",
