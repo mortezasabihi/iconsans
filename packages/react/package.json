@@ -1,6 +1,6 @@
 {
   "name": "@iconsans/react",
-  "version": "1.0.6-alpha.0",
+  "version": "1.0.6-alpha.1",
   "description": "+320 Free Icons for your next project, featuring a bold and linear style that will make your designs stand out. ",
   "keywords": [
     "iconsans",
@@ -36,7 +36,8 @@
   "publishConfig": {
     "access": "public",
     "ignore": [
-      "!dist"
+      "!dist/",
+      "!dist/node_modules"
     ]
   },
   "repository": {
@@ -60,5 +61,6 @@
     "@svgr/cli": "^7.0.0",
     "@types/react": "^18.2.14",
     "@vitejs/plugin-react": "^4.0.1"
-  }
+  },
+  "gitHead": "dd96afb56315c61ca23a6c0ae1d875244671d871"
 }
