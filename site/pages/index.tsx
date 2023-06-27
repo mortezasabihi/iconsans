@@ -1,14 +1,10 @@
 import { Header, Hero, IconsList } from "@/components";
 import { Container } from "@mui/material";
 import iconsList from "public/icons.json";
-
-type Icon = {
-  name: string;
-  svg: string;
-};
+import type { TIcon } from "@/types";
 
 export default function Index() {
-  const icons: Icon[] = iconsList;
+  const icons: TIcon[] = iconsList;
 
   return (
     <>
