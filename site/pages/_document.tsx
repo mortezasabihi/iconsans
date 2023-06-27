@@ -10,7 +10,7 @@ export default function Document() {
   return (
     <Html lang="en" className={roboto.className}>
       <Head>
-        <title>Iconsans - +320 Free Icons for your next project</title>
+        <title>Iconsans - +660 Free Icons for your next project</title>
         <link rel="shortcut icon" href={favIcon} />
       </Head>
       <body>
