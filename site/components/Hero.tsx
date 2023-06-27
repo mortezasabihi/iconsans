@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           color="text.secondary"
           paragraph
         >
-          Iconsans is a collection of over 320 free icons designed for use in
+          Iconsans is a collection of over 660 free icons designed for use in
           your next project. This package offers separate versions for{" "}
           <strong>Vue</strong> and <strong>React</strong>, making it easy for
           developers and designers to access a wide range of icons that can be
