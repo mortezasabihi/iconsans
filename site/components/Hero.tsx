@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           <Typography component="strong" variant="h2" fontWeight="bold">
             Iconsans
           </Typography>{" "}
-          - +320 Free Icons for your next project
+          - +660 Free Icons for your next project
         </Typography>
         <Typography
           variant="h5"
